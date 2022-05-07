@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dndinterfacefx.MainController">
+   <children>
+      <Label layoutX="485.0" layoutY="102.0" text="Raça:">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="475.0" layoutY="52.0" text="Classe:">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <ComboBox fx:id="bxClasse" layoutX="530.0" layoutY="50.0" prefWidth="150.0" />
+      <ComboBox fx:id="bxRaca" layoutX="530.0" layoutY="100.0" onAction="#subRacas" prefWidth="150.0" />
+      <Button fx:id="btClasse" layoutX="700.0" layoutY="50.0" mnemonicParsing="false" onAction="#aleatorizarClasse" text="Random" />
+      <MenuBar prefHeight="25.0" prefWidth="800.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button fx:id="btRaca" layoutX="700.0" layoutY="100.0" mnemonicParsing="false" onAction="#aleatorizarRacas" text="Random" />
+      <TextField layoutX="315.0" layoutY="50.0" prefHeight="25.0" prefWidth="150.0" />
+      <TextField layoutX="316.0" layoutY="100.0" />
+      <Label layoutX="185.0" layoutY="52.0" text="Nome Jogador(a):">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="146.0" layoutY="102.0" text="Nome do Persornagem:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="icPersornagem" fitHeight="125.0" fitWidth="125.0" layoutX="14.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="txSubRaca" layoutX="452.0" layoutY="152.0" text="Sub-Raça:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="btSubRaca" layoutX="700.0" layoutY="150.0" mnemonicParsing="false" onAction="#aleatorizarSubRacas" text="Random" />
+      <ComboBox fx:id="bxSubRaca" layoutX="530.0" layoutY="150.0" prefWidth="150.0" />
+      <ListView fx:id="lvStatus" fixedCellSize="-2.0" layoutX="313.0" layoutY="210.0" prefHeight="176.0" prefWidth="125.0" />
+      <Label layoutX="220.0" layoutY="215.0" text="Força:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="220.0" layoutY="245.0" text="Destreza:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="220.0" layoutY="274.0" text="Constituição:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="220.0" layoutY="303.0" prefHeight="21.0" prefWidth="86.0" text="Inteligência:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="220.0" layoutY="330.0" text="Sabedoria:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="220.0" layoutY="360.0" text="Carisma:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="btStatus" layoutX="376.0" layoutY="175.0" mnemonicParsing="false" onAction="#aleatorizarStatus" text="Random" />
+      <Button fx:id="btNovoPersornagem" layoutX="642.0" layoutY="461.0" mnemonicParsing="false" onAction="#superRandomize" text="Novo Persornagem" />
+      <Button fx:id="btTrocaForca" layoutX="445.0" layoutY="213.0" mnemonicParsing="false" onAction="#trocarForca" prefHeight="25.0" prefWidth="40.0" text="&lt;-&gt;" />
+      <Button fx:id="btTrocaDestreza" layoutX="445.0" layoutY="243.0" mnemonicParsing="false" onAction="#trocarDestreza" prefHeight="25.0" prefWidth="40.0" text="&lt;-&gt;" />
+      <Button fx:id="btTrocaConstituicao" layoutX="445.0" layoutY="272.0" mnemonicParsing="false" onAction="#trocarConstituicao" prefHeight="25.0" prefWidth="40.0" text="&lt;-&gt;" />
+      <Button fx:id="btTrocaInteligencia" layoutX="445.0" layoutY="301.0" mnemonicParsing="false" onAction="#trocarInteligencia" prefHeight="25.0" prefWidth="40.0" text="&lt;-&gt;" />
+      <Button fx:id="btTrocaSabedoria" layoutX="445.0" layoutY="328.0" mnemonicParsing="false" onAction="#trocarSabedoria" prefHeight="25.0" prefWidth="40.0" text="&lt;-&gt;" />
+      <Button fx:id="btTrocaCarisma" layoutX="445.0" layoutY="358.0" mnemonicParsing="false" onAction="#trocarCarisma" prefHeight="25.0" prefWidth="40.0" text="&lt;-&gt;" />
+      <Button layoutX="186.0" layoutY="150.0" mnemonicParsing="false" onAction="#SelecionarImagemPersornagem" text="Selecionar Imagem" />
+   </children>
+</AnchorPane>
